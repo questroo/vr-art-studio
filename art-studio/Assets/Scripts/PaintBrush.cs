@@ -53,7 +53,7 @@ public class PaintBrush : MonoBehaviour
     }
     private void Draw()
     {
-        if (Physics.Raycast(tip.position, tip.forward, out _hit, _tipHeight*25))
+        if (Physics.Raycast(tip.position, tip.forward, out _hit, _tipHeight * transform.localScale.z))
         {
             if (_hit.transform.CompareTag("PaintCanvas"))
             {
